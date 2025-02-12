@@ -24,7 +24,7 @@ def get_msgs(page_num):
 
 
 @app.route("/put_msg/<page_num>", methods=["POST"])
-def put_msg():
+def put_msg(page_num):
     name = request.form["name"]
     msg = request.form["msg"]
     # page_num = request.form["page_num"]
