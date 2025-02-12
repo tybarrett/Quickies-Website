@@ -63,7 +63,6 @@
 .form-block {
   height: 20%;
   flex: none;
-  order: 1;
   align-self: stretch;
 }
 
