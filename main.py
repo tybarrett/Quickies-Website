@@ -21,6 +21,7 @@ def specific_page(page_num):
 @app.route("/get_msgs/<page_num>")
 def get_msgs(page_num):
     msgs = mysql_wrapper.get_msgs(page_num)
+    msgs = [list(x) for x in msgs]
     return json.dumps(msgs)
 
 
