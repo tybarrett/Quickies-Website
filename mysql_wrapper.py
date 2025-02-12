@@ -7,7 +7,12 @@ conn = mysql.connector.connect(host="127.0.0.1",
                                 auth_plugin="mysql_native_password")
 
 def get_msgs(page_num):
-    pass
+    query = f"SELECT * FROM messages WHERE page_num='{page_num}';"
+    cursor = conn.cursor()
+    cursor.execute(query)
+    results = cursor.fetchall()
+    print(results)
+    return results
 
 
 def put_msg(data):
