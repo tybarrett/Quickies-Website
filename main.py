@@ -12,7 +12,7 @@ def index():
     return fp.read()
 
 
-@app.route("/<page_num")
+@app.route("/<page_num>")
 def specific_page():
     pass # TODO
 
