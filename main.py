@@ -30,6 +30,7 @@ def put_msg():
     page_num = request.form["page_num"]
 
     mysql_wrapper.put_msg({"name": name, "msg": msg, "page_num": page_num})
+    return "Success!"
 
 
 if __name__ == "__main__":
