@@ -3,6 +3,7 @@
   align-items: flex-start;
   display: flex;
   flex-grow: 1;
+  height: 80%;
 }
 
 .body {
@@ -60,6 +61,7 @@
 }
 
 .form-block {
+  height: 20%
   flex: none;
   order: 1;
   align-self: stretch;
