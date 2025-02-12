@@ -11,7 +11,7 @@ def get_msgs(page_num):
 
 
 def put_msg(data):
-    query = f"INSERT INTO quickies.messages VALUES (`{data['name']}`, `{data['msg']}`, `{data['page_num']}`);"
+    query = f"INSERT INTO messages (name, message, page_num) VALUES (`{data['name']}`, `{data['msg']}`, `{data['page_num']}`);"
     cursor = conn.cursor()
     cursor.execute(query)
     conn.commit()
