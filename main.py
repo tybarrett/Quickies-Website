@@ -23,7 +23,7 @@ def get_msgs(page_num):
     return json.dumps(msgs)
 
 
-@app.route("/put_msg/<page_num>", methods=["POST"])
+@app.route("/put_msg/<page_num>", methods=["GET", "POST"])
 def put_msg(page_num):
     name = request.form["name"]
     msg = request.form["msg"]
