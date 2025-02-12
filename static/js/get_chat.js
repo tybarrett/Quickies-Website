@@ -1,7 +1,7 @@
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open( "GET", "/get_msgs/" + PAGE_NUM, false); // false for synchronous request
-let resp = xmlHttp.responseText;
 xmlHttp.send(null);
+let resp = xmlHttp.responseText;
 alert("/get_msgs/" + PAGE_NUM);
 alert(resp);
 
