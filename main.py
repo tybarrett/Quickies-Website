@@ -13,8 +13,9 @@ def index():
 
 
 @app.route("/<page_num>")
-def specific_page():
-    pass # TODO
+def specific_page(page_num):
+    fp = open(f"{page_num}.html", "r")
+    return fp.read()
 
 
 @app.route("/get_msgs/<page_num>")
