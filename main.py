@@ -1,4 +1,4 @@
-from flask import Flask, send_file, request
+from flask import Flask, send_file, request, redirect
 import json
 
 import mysql_wrapper
@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    fp = open("index.html", "r")
+    fp = open("1.html", "r")
     return fp.read()
 
 
@@ -30,7 +30,7 @@ def put_msg(page_num):
     # page_num = request.form["page_num"]
 
     mysql_wrapper.put_msg({"name": name, "msg": msg, "page_num": page_num})
-    return "Success!"
+    return redirect("http://24.199.80.232:5000/" + page_num, code=302)
 
 
 if __name__ == "__main__":
