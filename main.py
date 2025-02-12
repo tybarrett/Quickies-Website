@@ -25,9 +25,9 @@ def get_msgs(page_num):
 
 @app.route("/put_msg", methods=["POST"])
 def put_msg():
-    name = request.args.get("name")
-    msg = request.args.get("msg")
-    page_num = request.args.get("page_num")
+    name = request.form["name"]
+    msg = request.form["msg"]
+    page_num = request.form["page_num"]
 
     mysql_wrapper.put_msg({"name": name, "msg": msg, "page_num": page_num})
 
