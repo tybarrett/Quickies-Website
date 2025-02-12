@@ -23,11 +23,11 @@ def get_msgs(page_num):
     return json.dumps(msgs)
 
 
-@app.route("/put_msg", methods=["POST"])
+@app.route("/put_msg/<page_num>", methods=["POST"])
 def put_msg():
     name = request.form["name"]
     msg = request.form["msg"]
-    page_num = request.form["page_num"]
+    # page_num = request.form["page_num"]
 
     mysql_wrapper.put_msg({"name": name, "msg": msg, "page_num": page_num})
     return "Success!"
