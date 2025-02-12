@@ -2,6 +2,7 @@
   flex-direction: column;
   align-items: flex-start;
   display: flex;
+  flex-grow: 1;
 }
 
 .body {
