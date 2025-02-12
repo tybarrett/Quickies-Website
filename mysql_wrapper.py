@@ -1,6 +1,6 @@
 import mysql.connector
 
-conn = mysql.connector.connect(host="24.199.80.232",
+conn = mysql.connector.connect(host="127.0.0.1",
                                 user="root",
                                 passwd="password",
                                 database="quickies",
