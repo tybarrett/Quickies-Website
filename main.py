@@ -1,4 +1,7 @@
-from flask import Flask, send_file
+from flask import Flask, send_file, request
+import json
+
+import mysql_wrapper
 
 app = Flask(__name__)
 
@@ -7,6 +10,26 @@ app = Flask(__name__)
 def index():
     fp = open("index.html", "r")
     return fp.read()
+
+
+@app.route("/<page_num")
+def specific_page():
+    pass # TODO
+
+
+@app.route("/get_msgs/<page_num>")
+def get_msgs(page_num):
+    msgs = mysql_wrapper.get_msgs(page_num)
+    return json.dumps(msgs)
+
+
+@app.route("/put_msg", methods=["POST"])
+def put_msg():
+    name = request.args.get("name")
+    msg = request.args.get("msg")
+    page_num = request.args.get("page_num")
+
+    mysql_wrapper.put_msg({"name": name, "msg": msg, "page_num": page_num})
 
 
 if __name__ == "__main__":
