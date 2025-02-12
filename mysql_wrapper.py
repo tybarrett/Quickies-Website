@@ -17,7 +17,7 @@ def get_msgs(page_num):
 
 def put_msg(data):
     # query = f"INSERT INTO messages (user_name, message, page_num) VALUES ('{data['name']}', '{data['msg']}', '{data['page_num']}');"
-    query = f"INSERT INTO messages (user_name, message, page_num) VALUES (%s, %s, %s');"
+    query = f"INSERT INTO messages (user_name, message, page_num) VALUES (%s, %s, %s);"
     cursor = conn.cursor(prepared=True)
     cursor.execute(query, (data["name"], data["msg"], data["page_num"]))
     conn.commit()
