@@ -82,6 +82,8 @@
   border: 3px solid #e65d33;
   border-radius: 10px;
   padding: 10px;
+  margin: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .section {
