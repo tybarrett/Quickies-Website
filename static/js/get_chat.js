@@ -4,9 +4,12 @@ xmlHttp.send(null);
 let resp = xmlHttp.responseText;
 alert("/get_msgs/" + PAGE_NUM);
 alert(resp);
+resp = JSON.parse(resp);
 
 ol = document.getElementById("chat_msgs_ol");
 
+console.log(resp);
+console.log(resp.length);
 for (let i=0; i < resp.length; i++) {
     msg_pkt = resp[i];
     new_li = document.createElement("li");
