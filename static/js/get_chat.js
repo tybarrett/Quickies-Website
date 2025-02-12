@@ -2,8 +2,6 @@ var xmlHttp = new XMLHttpRequest();
 xmlHttp.open( "GET", "/get_msgs/" + PAGE_NUM, false); // false for synchronous request
 xmlHttp.send(null);
 let resp = xmlHttp.responseText;
-alert("/get_msgs/" + PAGE_NUM);
-alert(resp);
 resp = JSON.parse(resp);
 
 ol = document.getElementById("chat_msgs_ol");
