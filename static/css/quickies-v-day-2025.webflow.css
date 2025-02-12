@@ -127,6 +127,14 @@
 }
 
 .quickies-nav-button {
+    position: absolute;
+    left: 1%;
     color: rgb(0, 0, 0);
     text-decoration: none;
+    font-weight: bold;
+}
+
+.quickies-next {
+    position: absolute;
+    right: 1%
 }
